@@ -1,11 +1,11 @@
 .page {
   background: white;
-  width: $page-width;
+  width: 791px;
   min-height: $page-height;
   display: block;
   margin: 0 auto;
   border-top: 10px solid $primary-color;
-  padding: 36px 22px 30px 34px;
+  padding: 36px 1px 30px 1px;
   @include shadow();
   @include clearfix();
 }
