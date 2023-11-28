@@ -23,12 +23,6 @@
     &.fa-desktop {
       @include font-size(2.75);
     }
-
-    &.fa-external-link {
-      width: auto;
-      font-size: inherit;
-      vertical-align: text-top;
-    }
   }
 
   .info-text {
