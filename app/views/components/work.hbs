@@ -5,6 +5,8 @@
   {{#each resume.work}}
   <section class="item">
     {{> section-header name=this.company }}
+    {{#each project}}
+    {{> section-header name=this.name }}
 
     {{#if position}}
       <h4>{{position}}</h4>
@@ -21,6 +23,7 @@
         {{/each}}
       </ul>
     {{/if}}
+    {{/each}}
   </section>
   {{/each}}
 </div>
