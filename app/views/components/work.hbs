@@ -18,25 +18,32 @@
           </ul>
         {{/if}}
 
-        {{#each project}}
-          {{> project-header name=this.name }}
+        <div class="project-section">
+          {{#each project}}
+          <div class="each-project">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <div class="about-project">
+              {{> project-header name=this.name }}
 
-          {{#if position}}
-          {{> position-section name=this.position }}
-          {{/if}}
+              {{#if position}}
+                {{> position-section name=this.position }}
+              {{/if}}
 
-          {{#if summary}}
-          <p class="summary">{{summary}}</p>
-          {{/if}}
+              {{#if summary}}
+                <p class="summary">{{summary}}</p>
+              {{/if}}
 
-          {{#if highlights.length}}
-          <ul class="highlights">
-            {{#each highlights}}
-            <li>{{.}}</li>
-            {{/each}}
-          </ul>
-          {{/if}}
-        {{/each}}
+              {{#if highlights.length}}
+                <ul class="">
+                  {{#each highlights}}
+                    <li>{{.}}</li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </div>
+          </div>
+          {{/each}}
+        </div>
       </section>
     {{/each}}
   </div>
