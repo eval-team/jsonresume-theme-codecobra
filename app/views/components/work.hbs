@@ -21,6 +21,30 @@
 
     <div class="project-section">
       {{#each project}}
+      {{#if breakBefore}}
+      <div class="each-project page-break">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <div class="about-project">
+          {{> project-header name=this.name }}
+
+          {{#if position}}
+          {{> position-section name=this.position }}
+          {{/if}}
+
+          {{#if summary}}
+          <p class="summary">{{summary}}</p>
+          {{/if}}
+
+          {{#if highlights.length}}
+          <ul class="">
+            {{#each highlights}}
+            <li>{{.}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </div>
+      </div>
+      {{else}}
       <div class="each-project">
         <i class="fa fa-arrow-right" aria-hidden="true"></i>
         <div class="about-project">
@@ -43,6 +67,7 @@
           {{/if}}
         </div>
       </div>
+      {{/if}}
       {{/each}}
     </div>
   </section>
@@ -64,6 +89,30 @@
 
     <div class="project-section">
       {{#each project}}
+      {{#if breakBefore}}
+      <div class="each-project page-break">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <div class="about-project">
+          {{> project-header name=this.name }}
+
+          {{#if position}}
+          {{> position-section name=this.position }}
+          {{/if}}
+
+          {{#if summary}}
+          <p class="summary">{{summary}}</p>
+          {{/if}}
+
+          {{#if highlights.length}}
+          <ul class="">
+            {{#each highlights}}
+            <li>{{.}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </div>
+      </div>
+      {{else}}
       <div class="each-project">
         <i class="fa fa-arrow-right" aria-hidden="true"></i>
         <div class="about-project">
@@ -86,6 +135,7 @@
           {{/if}}
         </div>
       </div>
+      {{/if}}
       {{/each}}
     </div>
   </section>
