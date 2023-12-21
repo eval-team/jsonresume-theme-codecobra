@@ -1,50 +1,95 @@
 {{#if resume.work.length}}
-  <div class="container work-container">
-    {{> title value="Experience"}}
+<div class="container work-container">
+  {{> title value="Experience"}}
 
-    {{#each resume.work}}
-      <section class="item">
-        {{> section-header name=this.company }}
+  {{#each resume.work}}
+  {{#if breakBefore}}
+  <section class="item page-break">
+    {{> section-header name=this.company }}
 
-        {{#if summary}}
+    {{#if summary}}
+    <p class="summary">{{summary}}</p>
+    {{/if}}
+
+    {{#if highlights.length}}
+    <ul class="highlights">
+      {{#each highlights}}
+      <li>{{.}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+    <div class="project-section">
+      {{#each project}}
+      <div class="each-project">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <div class="about-project">
+          {{> project-header name=this.name }}
+
+          {{#if position}}
+          {{> position-section name=this.position }}
+          {{/if}}
+
+          {{#if summary}}
           <p class="summary">{{summary}}</p>
-        {{/if}}
+          {{/if}}
 
-        {{#if highlights.length}}
-          <ul class="highlights">
+          {{#if highlights.length}}
+          <ul class="">
             {{#each highlights}}
             <li>{{.}}</li>
             {{/each}}
           </ul>
-        {{/if}}
-
-        <div class="project-section">
-          {{#each project}}
-          <div class="each-project">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            <div class="about-project">
-              {{> project-header name=this.name }}
-
-              {{#if position}}
-                {{> position-section name=this.position }}
-              {{/if}}
-
-              {{#if summary}}
-                <p class="summary">{{summary}}</p>
-              {{/if}}
-
-              {{#if highlights.length}}
-                <ul class="">
-                  {{#each highlights}}
-                    <li>{{.}}</li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-            </div>
-          </div>
-          {{/each}}
+          {{/if}}
         </div>
-      </section>
-    {{/each}}
-  </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+  {{else}}
+  <section class="item">
+    {{> section-header name=this.company }}
+
+    {{#if summary}}
+    <p class="summary">{{summary}}</p>
+    {{/if}}
+
+    {{#if highlights.length}}
+    <ul class="highlights">
+      {{#each highlights}}
+      <li>{{.}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+    <div class="project-section">
+      {{#each project}}
+      <div class="each-project">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <div class="about-project">
+          {{> project-header name=this.name }}
+
+          {{#if position}}
+          {{> position-section name=this.position }}
+          {{/if}}
+
+          {{#if summary}}
+          <p class="summary">{{summary}}</p>
+          {{/if}}
+
+          {{#if highlights.length}}
+          <ul class="">
+            {{#each highlights}}
+            <li>{{.}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+  {{/if}}
+  {{/each}}
+</div>
 {{/if}}

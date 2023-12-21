@@ -1,18 +1,23 @@
 /* Utils */
-@import 'utils/variables';
-@import 'utils/mixins';
-@import 'utils/functions';
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/functions";
 
 /* Base */
-@import 'base/fonts';
-@import 'base/base';
-@import 'base/global';
+@import "base/fonts";
+@import "base/base";
+@import "base/global";
 
 /* Layouts */
-@import 'layouts/page';
-@import 'layouts/print';
+@import "layouts/page";
+@import "layouts/print";
 
 /* Components */
-@import 'components/info-tag';
-@import 'components/references';
-@import 'components/education';
+@import "components/info-tag";
+@import "components/references";
+@import "components/education";
+
+.page-break {
+  margin-top: 15px;
+  page-break-before: always;
+}
