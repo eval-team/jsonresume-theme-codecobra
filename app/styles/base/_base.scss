@@ -130,6 +130,21 @@ ul {
   }
 }
 
+.keywords-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.keyword {
+  background-color: #ededf5;
+  padding: 2px;
+  border-radius: 4px;
+}
+
 @page {
   size: A4;
 }

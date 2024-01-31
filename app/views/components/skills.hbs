@@ -9,13 +9,11 @@
       <h4 class="bold">{{level}}</h4>
     {{/if}}
     {{#if keywords.length}}
-      <ul class="minimal">
+      <div class="keywords-container">
         {{#each keywords}}
-        <li>
-          <h6>{{.}}</h6>
-        </li>
+        <span class="keyword">{{.}}</span>
         {{/each}}
-      </ul>
+      </div>
     {{/if}}
   </section>
   {{/each}}
