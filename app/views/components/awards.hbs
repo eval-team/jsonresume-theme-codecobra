@@ -3,17 +3,31 @@
   {{> title value="Awards"}}
 
   {{#each resume.awards}}
-    <section class="item">
-      {{> section-header name=this.title }}
+  {{#if breakBefore}}
+  <section class="item page-break">
+    {{> section-header name=this.title }}
 
-      {{#if awarder}}
-        <h5 class="awarder">{{awarder}}</h5>
-      {{/if}}
+    {{#if awarder}}
+    <h5 class="awarder">{{awarder}}</h5>
+    {{/if}}
 
-      {{#if summary}}
-        <p class="summary">{{summary}}</p>
-      {{/if}}
-    </section>
+    {{#if summary}}
+    <p class="summary">{{summary}}</p>
+    {{/if}}
+  </section>
+  {{else}}
+  <section class="item">
+    {{> section-header name=this.title }}
+
+    {{#if awarder}}
+    <h5 class="awarder">{{awarder}}</h5>
+    {{/if}}
+
+    {{#if summary}}
+    <p class="summary">{{summary}}</p>
+    {{/if}}
+  </section>
+  {{/if}}
   {{/each}}
 </div>
 {{/if}}
