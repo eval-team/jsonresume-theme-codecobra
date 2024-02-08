@@ -1,10 +1,9 @@
 {{#if resume.awards.length}}
-<div class="container awards-container">
+<div class="container awards-container {{#if resume.awards.[0].breakBefore}}container-page-break{{/if}}">
   {{> title value="Awards"}}
 
   {{#each resume.awards}}
-  {{#if breakBefore}}
-  <section class="item page-break">
+  <section class="item {{#if breakBefore}}{{#unless @first}}page-break{{/unless}}{{/if}}">
     {{> section-header name=this.title }}
 
     {{#if awarder}}
@@ -15,19 +14,6 @@
     <p class="summary">{{summary}}</p>
     {{/if}}
   </section>
-  {{else}}
-  <section class="item">
-    {{> section-header name=this.title }}
-
-    {{#if awarder}}
-    <h5 class="awarder">{{awarder}}</h5>
-    {{/if}}
-
-    {{#if summary}}
-    <p class="summary">{{summary}}</p>
-    {{/if}}
-  </section>
-  {{/if}}
   {{/each}}
 </div>
 {{/if}}
