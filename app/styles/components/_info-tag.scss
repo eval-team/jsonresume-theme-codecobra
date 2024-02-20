@@ -37,4 +37,8 @@
     vertical-align: middle;
     width: $aside-width - $aside-margin - 1;
   }
+
+  .lowercase {
+    text-transform: lowercase;
+  }
 }
