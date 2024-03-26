@@ -14,7 +14,12 @@
     {{#if highlights.length}}
     <ul class="highlights">
       {{#each highlights}}
-      <li>{{.}}</li>
+      <li>
+        <strong>
+          {{extractBeforeColon text}}
+        </strong>
+        {{extractAfterColon text}}
+      </li>
       {{/each}}
     </ul>
     {{/if}}
@@ -129,7 +134,12 @@
           {{#if highlights.length}}
           <ul class="">
             {{#each highlights}}
-            <li>{{.}}</li>
+            <li>
+              <strong>
+                {{extractBeforeColon .}}
+              </strong>
+              {{extractAfterColon .}}
+            </li>
             {{/each}}
           </ul>
           {{/if}}

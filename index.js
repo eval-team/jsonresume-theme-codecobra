@@ -40,6 +40,16 @@ handlebars.registerHelper({
 
   formatDate: function (date) {
     return moment(date).format('MM/YYYY');
+  },
+
+  extractAfterColon: function(text) {
+    var match = text.match(/:\s*(.*)/);
+    return match ? match[1] : "";
+  },
+
+  extractBeforeColon: function(text) {
+    var match = text.match(/(.*):/);
+    return match ? match[1]+":" : text;
   }
 });
 
