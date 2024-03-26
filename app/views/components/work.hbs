@@ -16,9 +16,9 @@
       {{#each highlights}}
       <li>
         <strong>
-          {{extractBeforeColon text}}
+          {{extractBeforeColon .}}
         </strong>
-        {{extractAfterColon text}}
+        {{extractAfterColon .}}
       </li>
       {{/each}}
     </ul>
